@@ -1,15 +1,53 @@
-# Your distro. Change anything here, commit, and GitHub Actions builds it.
-# Every option is explained at
-# https://docs.linuxlive.com/spec/reference/
+# Hawk OS GS8, made with the linuxlive.com wizard on 2026-11-01.
+# Build it in your own GitHub from https://github.com/Eric-Ness/linuxlive-distro (see README.md)
 schema_version: 1
-name: My Distro          # up to 40 characters; shown in the boot menu and About screen
-version: "0.1"           # keep the quotes
-base: ubuntu             # ubuntu or fedora
-desktop: cinnamon        # gnome, kde or cinnamon
-apps:                    # from Flathub; app ids: https://docs.linuxlive.com/spec/catalog/
-  - firefox
+name: "Hawk OS GS8"
+version: "11.2026"
+base: ubuntu
+desktop: kde
+apps:
+  - libreoffice
   - vlc
+  - steam
+  - heroic
+  - discord
+  - krita
+  - blender
+  - gcompris
+  - tuxpaint
+  - vscode
+  - chromium
+  - gimp
+  - firefox
 branding:
-  wallpaper: assets/wallpaper.png   # PNG, at least 1280x720, with one strong colour
-  logo: assets/logo.png             # square PNG of 128, 256 or 512 pixels
-  accent_color: "#c2185b"           # used by KDE and GNOME; keep the quotes
+  wallpaper: assets/wallpaper.png
+  logo: assets/logo.png
+  accent_color: "#6a1b9a"
+  splash:
+    script: assets/splash/splash.script
+    images:
+      - assets/splash/spinner-03.png
+      - assets/splash/spinner-06.png
+      - assets/splash/spinner-07.png
+      - assets/splash/spinner-00.png
+      - assets/splash/spinner-01.png
+      - assets/splash/spinner-04.png
+      - assets/splash/spinner-11.png
+      - assets/splash/hawk-logo.png
+      - assets/splash/spinner-05.png
+      - assets/splash/spinner-09.png
+      - assets/splash/spinner-10.png
+      - assets/splash/spinner-08.png
+      - assets/splash/spinner-02.png
+settings:
+  hostname: hawk-gs8
+  autologin: true
+  dock:
+    - vlc
+    - steam
+    - heroic
+    - discord
+    - vscode
+    - chromium
+    - gimp
+    - firefox
